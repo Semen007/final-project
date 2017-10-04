@@ -1,0 +1,13 @@
+<div class="contact-item" [class.chosen]="contact.chosen">
+    <button class="checkbox icon" (click)="onToggle()">
+            <i class="material-icons">
+                {{ contact.chosen ? 'check_box' : 'check_box_outline_blank' }}
+            </i>
+        </button>
+    <span class="title">{{ contact.name }}</span>
+    <div class="actions">
+        <button class="delete icon" (click)="onDelete()">
+            <i class="material-icons">delete</i>
+            </button>
+    </div>
+</div>

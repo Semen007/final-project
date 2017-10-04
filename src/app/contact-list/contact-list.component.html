@@ -1,0 +1,3 @@
+<div class="contact-list" *ngIf="contacts.length">
+    <contact-item *ngFor="let contact of contacts" [contact]="contact" (delete)="delete($event)" (toggle)="toggle($event)"></contact-item>
+</div>

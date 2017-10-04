@@ -1,0 +1,4 @@
+<form class="contact-form" (ngSubmit)="onSubmit(); contactForm.reset()" #contactForm="ngForm">
+    <input type="text" name="name" [(ngModel)]="name" placeholder="New contact" required>
+    <button type="submit" [disabled]="contactForm.form.invalid">Add contact</button>
+</form>
