@@ -4,7 +4,7 @@
                 {{ contact.chosen ? 'check_box' : 'check_box_outline_blank' }}
             </i>
         </button>
-    <span class="title">{{ contact.name }}</span>
+    <span class="title">{{ contact.firstName }} {{ contact.secondName }}</span>
     <div class="actions">
         <button class="delete icon" (click)="onDelete()">
             <i class="material-icons">delete</i>

@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 
 import { Contact } from './shared/contact';
-import { contacts } from './shared/data';
 
 @Component({
   moduleId: module.id,

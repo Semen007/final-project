@@ -1,13 +1,25 @@
 {
-    "contacts": [{
-        "id": 1,
-        "firstName": "John",
-        "secondName": "Doe",
-        "phone": 380666666666,
-        "birthday": "01.01.2000",
-        "website": "http://example.com",
-        "email": "john.doe@example.com",
-        "company": "freelance"
-    }],
-    "profile": { "name": "typicode" }
+  "contacts": [
+    {
+      "id": 1,
+      "firstName": "John",
+      "secondName": "Doe",
+      "phone": 380666666666,
+      "birthday": "01.01.2000",
+      "website": "http://example.com",
+      "email": "john.doe@example.com",
+      "company": "freelance"
+    },
+    {
+      "firstName": "Jesus Christ",
+      "id": 3
+    },
+    {
+      "firstName": "Adolf Hitler",
+      "id": 4
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
 }

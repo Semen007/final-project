@@ -18,14 +18,14 @@ export class ContactListComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.contacts = this.contactService.getContacts();
+        this.contactService.getContacts().then(contacts => this.contacts = contacts);
     }
 
     delete(contact: Contact) {
         this.contactService.deleteContact(contact);
     }
 
-    toggle(contact: Contact) {
-        this.contactService.toggleContact(contact);
-    }
+    // toggle(contact: Contact) {
+    //     this.contactService.toggleContact(contact);
+    // }
 }
