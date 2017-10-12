@@ -1,4 +1,10 @@
 <form class="contact-form" (ngSubmit)="onSubmit(); contactForm.reset()" #contactForm="ngForm">
-    <input type="text" name="name" [(ngModel)]="name" placeholder="New contact" required>
+    <input type="text" name="firstName" [(ngModel)]="firstName" placeholder="Name" required>
+    <input type="text" name="secondName" [(ngModel)]="secondName" placeholder="Surname">
+    <input type="tel" name="phone" [(ngModel)]="phone" placeholder="Phone">
+    <input type="month" name="birthday" [(ngModel)]="birthday" placeholder="Birthday">
+    <input type="url" name="website" [(ngModel)]="website" placeholder="Website">
+    <input type="email" name="email" [(ngModel)]="email" placeholder="Email">
+    <input type="text" name="company" [(ngModel)]="company" placeholder="Company">
     <button type="submit" [disabled]="contactForm.form.invalid">Add contact</button>
 </form>

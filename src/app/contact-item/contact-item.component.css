@@ -67,6 +67,7 @@ button[disabled] {
     padding: 1em;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .contact-item .checkbox {
@@ -88,7 +89,7 @@ button[disabled] {
 }
 
 .contact-item .actions {
-    margin-left: auto;
+    /* margin-left: auto; */
     opacity: 0;
     transition: all .2s;
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+
 import { ContactService } from '../shared/contact.service';
 
 @Component({
@@ -9,11 +10,27 @@ import { ContactService } from '../shared/contact.service';
   })
 
 export class ContactFormComponent {
-    name: string = '';
+    // name: string = '';
+
+
+
+
+
+    firstName?: string = '';
+    secondName?: string = '';
+    phone?: number;
+    birthday?: string = '';
+    website?: string = '';
+    email?: string = '';
+    company?: string = '';
+
+
+
+
 
     constructor(private contactService: ContactService) {}
 
     onSubmit() {
-        this.contactService.createContact(this.name);
+        this.contactService.createContact(this.firstName, this.secondName, this.phone, this.birthday, this.website, this.email, this.company);
     }
 }

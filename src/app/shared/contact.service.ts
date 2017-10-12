@@ -19,10 +19,10 @@ export class ContactService {
                         .catch(this.handleError);
     }
 
-    createContact(name: string) {
+    createContact(firstName: string, secondName: string, phone: number, birthday: string, website: string, email: string, company: string) {
         let headers = new Headers({ 'Content-Type': 'application/json' });
         let options = new RequestOptions({ headers });
-        let contact = new Contact(name);
+        let contact = new Contact(firstName, secondName, phone, birthday, website, email, company);
 
         this.http.post(this.serverUrl, contact, options)
                  .toPromise()

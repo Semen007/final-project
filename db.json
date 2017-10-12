@@ -11,12 +11,43 @@
       "company": "freelance"
     },
     {
-      "firstName": "Jesus Christ",
+      "firstName": "Jesus",
+      "secondName": "Christ",
+      "phone": "+38077-777-77-77",
+      "birthday": "07.01.0000",
+      "website": "www.heaven.com",
+      "email": "jaycee@godmail.com",
+      "company": "Christianity",
+      "id": 2
+    },
+    {
+      "firstName": "Adolf",
+      "secondName": "Hitler",
+      "phone": "+380881400880",
+      "birthday": "20.04.1889",
+      "website": "https://en.wikipedia.org/wiki/Adolf_Hitler",
+      "email": "addy@mail.de",
+      "company": "Reich III",
       "id": 3
     },
     {
-      "firstName": "Adolf Hitler",
+      "firstName": "Semen",
+      "secondName": "Chynenov",
+      "phone": "380506596842",
+      "birthday": "12.01.1950",
+      "website": "",
+      "email": "free_porn@ukr.net",
+      "company": "",
       "id": 4
+    },
+    {
+      "firstName": "Semen",
+      "secondName": "Chynenov",
+      "birthday": "20.04.1889",
+      "website": "kin",
+      "email": "free_porn@ukr.net",
+      "company": "",
+      "id": 5
     }
   ],
   "profile": {
