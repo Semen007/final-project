@@ -1,4 +1,4 @@
-<form class="contact-form" (ngSubmit)="onSubmit(); contactForm.reset()" #contactForm="ngForm">
+<form class="contact-form" (ngSubmit)="onSubmit(); contactForm.reset(); dialogRef.close()" #contactForm="ngForm">
     <input type="text" name="firstName" [(ngModel)]="firstName" placeholder="Name" required>
     <input type="text" name="secondName" [(ngModel)]="secondName" placeholder="Surname">
     <input type="tel" name="phone" [(ngModel)]="phone" placeholder="Phone">
@@ -8,3 +8,4 @@
     <input type="text" name="company" [(ngModel)]="company" placeholder="Company">
     <button type="submit" [disabled]="contactForm.form.invalid">Add contact</button>
 </form>
+<button (click)="dialogRef.close()">Cancel</button>

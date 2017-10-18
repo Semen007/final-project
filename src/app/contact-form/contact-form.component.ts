@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MatDialogRef } from '@angular/material';
 
 import { ContactService } from '../shared/contact.service';
 
@@ -10,12 +11,6 @@ import { ContactService } from '../shared/contact.service';
   })
 
 export class ContactFormComponent {
-    // name: string = '';
-
-
-
-
-
     firstName?: string = '';
     secondName?: string = '';
     phone?: number;
@@ -24,12 +19,8 @@ export class ContactFormComponent {
     email?: string = '';
     company?: string = '';
 
-
-
-
-
-    constructor(private contactService: ContactService) {}
-
+    constructor(private contactService: ContactService, public dialogRef: MatDialogRef<ContactFormComponent>) {}
+    
     onSubmit() {
         this.contactService.createContact(this.firstName, this.secondName, this.phone, this.birthday, this.website, this.email, this.company);
     }

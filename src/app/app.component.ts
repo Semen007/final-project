@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 
 import { Contact } from './shared/contact';
+import { ContactFormComponent } from './contact-form/contact-form.component';
+import { MatDialog } from '@angular/material';
 
 @Component({
   moduleId: module.id,
@@ -11,4 +13,10 @@ import { Contact } from './shared/contact';
 
 export class AppComponent {
   title = 'Gooqle Contacts';
+  
+  constructor(public dialog: MatDialog) { }
+  
+    openDialog(key) {
+      let dialogRef = this.dialog.open(ContactFormComponent);
+    }
 }

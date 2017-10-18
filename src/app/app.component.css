@@ -125,3 +125,23 @@ contact-form,
 contact-list {
     width: 100%;
 }
+
+.add-circle {
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e91e63;
+    bottom: 0;
+    margin-bottom: 24px;
+    margin-right: 24px;
+    position: fixed;
+    right: 0
+}
+
+.add-circle i {
+    color: #fff;
+    font-size: 36px;
+}

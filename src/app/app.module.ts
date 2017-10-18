@@ -2,6 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { RouterModule }   from '@angular/router';
+import { MatDialogModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
@@ -19,8 +22,17 @@ import { ContactService } from './shared/contact.service';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot([
+      {
+        path: 'contact-form',
+        component: ContactFormComponent
+      }
+    ]),
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
+  entryComponents: [ ContactFormComponent ],  
   providers: [ContactService],
   bootstrap: [AppComponent]
 })
