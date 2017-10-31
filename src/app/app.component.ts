@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 import { Contact } from './shared/contact';
 import { ContactFormComponent } from './contact-form/contact-form.component';
-import { MatDialog } from '@angular/material';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 
 @Component({
   moduleId: module.id,
@@ -13,10 +13,19 @@ import { MatDialog } from '@angular/material';
 
 export class AppComponent {
   title = 'Gooqle Contacts';
-  
+
   constructor(public dialog: MatDialog) { }
-  
-    openDialog(key) {
-      let dialogRef = this.dialog.open(ContactFormComponent);
-    }
+
+  // openDialog(key) {
+  //   let dialogRef = this.dialog.open(ContactFormComponent);
+  // }
+
+  openDialog(): void {
+    let dialogRef = this.dialog.open(ContactFormComponent, {
+      width: '250px',
+      // data: { name: this.name, animal: this.animal }
+    });
+
+    dialogRef.afterClosed().subscribe();
+  }
 }

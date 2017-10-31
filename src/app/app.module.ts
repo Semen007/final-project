@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { RouterModule }   from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { MatDialogModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -11,13 +11,15 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ContactListComponent } from './contact-list/contact-list.component';
 import { ContactItemComponent } from './contact-item/contact-item.component';
 import { ContactService } from './shared/contact.service';
+import { ContactDetailsComponent } from './contact-details/contact-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactFormComponent,
     ContactListComponent,
-    ContactItemComponent
+    ContactItemComponent,
+    ContactDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,10 @@ import { ContactService } from './shared/contact.service';
     BrowserAnimationsModule,
     MatDialogModule
   ],
-  entryComponents: [ ContactFormComponent ],  
+  entryComponents: [
+    ContactFormComponent,
+    ContactDetailsComponent
+  ],
   providers: [ContactService],
   bootstrap: [AppComponent]
 })

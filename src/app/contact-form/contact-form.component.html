@@ -1,11 +1,14 @@
-<form class="contact-form" (ngSubmit)="onSubmit(); contactForm.reset(); dialogRef.close()" #contactForm="ngForm">
-    <input type="text" name="firstName" [(ngModel)]="firstName" placeholder="Name" required>
-    <input type="text" name="secondName" [(ngModel)]="secondName" placeholder="Surname">
-    <input type="tel" name="phone" [(ngModel)]="phone" placeholder="Phone">
-    <input type="month" name="birthday" [(ngModel)]="birthday" placeholder="Birthday">
-    <input type="url" name="website" [(ngModel)]="website" placeholder="Website">
-    <input type="email" name="email" [(ngModel)]="email" placeholder="Email">
-    <input type="text" name="company" [(ngModel)]="company" placeholder="Company">
-    <button type="submit" [disabled]="contactForm.form.invalid">Add contact</button>
-</form>
-<button (click)="dialogRef.close()">Cancel</button>
+<h1 mat-dialog-title>Create contact</h1>
+<div mat-dialog-content>
+    <form class="contact-form" (ngSubmit)="onSubmit(); contactForm.reset(); dialogRef.close()" #contactForm="ngForm">
+        <mat-form-field><input type="text" name="firstName" matInput [(ngModel)]="firstName" placeholder="Name" required></mat-form-field>
+        <mat-form-field><input type="text" name="secondName" matInput [(ngModel)]="secondName" placeholder="Surname"></mat-form-field>
+        <mat-form-field><input type="tel" name="phone" matInput [(ngModel)]="phone" placeholder="Phone"></mat-form-field>
+        <mat-form-field><input type="month" name="birthday" matInput [(ngModel)]="birthday" placeholder="Birthday"></mat-form-field>
+        <mat-form-field><input type="url" name="website" matInput [(ngModel)]="website" placeholder="Website"></mat-form-field>
+        <mat-form-field><input type="email" name="email" matInput [(ngModel)]="email" placeholder="Email"></mat-form-field>
+        <mat-form-field><input type="text" name="company" matInput [(ngModel)]="company" placeholder="Company"></mat-form-field>
+        <button mat-button type="submit" [disabled]="contactForm.form.invalid">Add contact</button>
+        <button mat-button type="button" (click)="dialogRef.close()">Cancel</button>
+    </form>
+</div>

@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { MatDialogRef } from '@angular/material';
+import {Component, Inject} from '@angular/core';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 
 import { ContactService } from '../shared/contact.service';
 
@@ -11,6 +11,7 @@ import { ContactService } from '../shared/contact.service';
   })
 
 export class ContactFormComponent {
+
     firstName?: string = '';
     secondName?: string = '';
     phone?: number;
@@ -19,9 +20,23 @@ export class ContactFormComponent {
     email?: string = '';
     company?: string = '';
 
-    constructor(private contactService: ContactService, public dialogRef: MatDialogRef<ContactFormComponent>) {}
-    
+    constructor(
+        private contactService: ContactService,
+        public dialogRef: MatDialogRef<ContactFormComponent>,
+        @Inject(MAT_DIALOG_DATA) public data: any) {}
+
     onSubmit() {
-        this.contactService.createContact(this.firstName, this.secondName, this.phone, this.birthday, this.website, this.email, this.company);
+        this.contactService.createContact(
+            this.firstName,
+            this.secondName,
+            this.phone,
+            this.birthday,
+            this.website,
+            this.email,
+            this.company);
+    }
+
+    onNoClick(): void {
+        this.dialogRef.close();
     }
 }
