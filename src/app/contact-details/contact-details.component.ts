@@ -7,16 +7,12 @@ import { ContactService } from '../shared/contact.service';
 @Component({
   selector: 'app-contact-details',
   templateUrl: './contact-details.component.html',
-  styleUrls: ['./contact-details.component.css']
+  styleUrls: ['../contact-form/contact-form.component.css']
 })
 export class ContactDetailsComponent {
 
   constructor(private contactService: ContactService,
               public dialogRef: MatDialogRef<ContactDetailsComponent>,
               @Inject(MAT_DIALOG_DATA) public data: any) { }
-
-  onNoClick(): void {
-    this.dialogRef.close();
-  }
 
 }

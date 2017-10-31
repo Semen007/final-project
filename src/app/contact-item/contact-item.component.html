@@ -1,17 +1,14 @@
 <div class="contact-item" [class.chosen]="contact.chosen">
-    <button class="checkbox icon" (click)="onToggle()">
-        <i class="material-icons">
-            {{ contact.chosen ? 'check_box' : 'check_box_outline_blank' }}
-        </i>
-    </button>
     <div><span class="title"> {{ contact.firstName }} &nbsp;</span><span> {{ contact.secondName }} </span></div>
     <div><span class="email"> {{ contact.email }} </span></div>
     <div><span class="phone"> {{ contact.phone }} </span></div>
     <div><span class="occupation"> {{ contact.company }} </span></div>
     <div class="actions">
-        <button class="delete icon" (click)="onDelete()">
+        <button mat-raised-button class="delete icon" (click)="onDelete()">
         <i class="material-icons">delete</i>
         </button>
-        <button mat-raised-button (click)="openDialog()">Pick one</button>
+        <button mat-raised-button class="delete icon" (click)="openDialog()">
+            <i class="material-icons">more_vert</i>
+        </button>
     </div>
 </div>

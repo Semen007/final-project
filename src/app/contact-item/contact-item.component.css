@@ -89,11 +89,19 @@ button[disabled] {
 }
 
 .contact-item .actions {
-    /* margin-left: auto; */
     opacity: 0;
     transition: all .2s;
 }
 
 .contact-item:hover .actions {
     opacity: 1;
+}
+
+.contact-item div {
+    width: 23%;
+}
+
+.contact-item div:last-child {
+    text-align: right;
+    width: 8%;
 }

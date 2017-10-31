@@ -25,7 +25,4 @@ export class ContactListComponent implements OnInit {
         this.contactService.deleteContact(contact);
     }
 
-    // toggle(contact: Contact) {
-    //     this.contactService.toggleContact(contact);
-    // }
 }

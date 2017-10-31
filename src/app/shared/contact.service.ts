@@ -52,19 +52,6 @@ export class ContactService {
         }
     }
 
-    // toggleContact(contact: Contact) {
-    //     let headers = new Headers({ 'Content-Type': 'application/json' });
-    //     let options = new RequestOptions({ headers });
-    //     let url = `${this.serverUrl}/${contact.id}`;
-
-    //     this.http.put(url, contact, options)
-    //              .toPromise()
-    //              .then(res => {
-    //                 contact.chosen = !contact.chosen;
-    //              })
-    //              .catch(this.handleError);
-    // }
-
     private handleError(error: any) {
         console.error('An error occured', error);
         return Promise.reject(error.message || error);

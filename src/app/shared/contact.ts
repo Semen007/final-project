@@ -7,6 +7,5 @@ export class Contact {
                 public website?: string,
                 public email?: string,
                 public company?: string
-                // chosen: boolean = false;
                 ) {}
   }
